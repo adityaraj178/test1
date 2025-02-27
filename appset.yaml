@@ -7,9 +7,9 @@ spec:
   generators:
   - list:
       elements:
-      - cluster: staging
+      #- cluster: staging
         #url: https://kubernetes.default.svc
-        namespace: staging-myapp
+        #namespace: staging-myapp
       - cluster: production
         #url: https://kubernetes.default.svc
         namespace: production-myapp

@@ -8,9 +8,11 @@ spec:
   - list:
       elements:
       - cluster: staging
-        url: https://kubernetes.default.svc
+        #url: https://kubernetes.default.svc
+        namespace: staging-myapp
       - cluster: production
-        url: https://kubernetes.default.svc
+        #url: https://kubernetes.default.svc
+        namespace: production-myapp
 
   template:
     metadata:

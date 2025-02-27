@@ -26,7 +26,7 @@ spec:
       destination:
         #server: '{{url}}'
         server: https://kubernetes.default.svc
-        namespace: myapp
+        namespace: myapp-set
       syncPolicy:
         automated:
           selfHeal: true

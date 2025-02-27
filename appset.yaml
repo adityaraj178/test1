@@ -18,9 +18,9 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/your-repo.git  # Change to your repo
+        repoURL: https://github.com/adityaraj178/test1.git  # Change to your repo
         targetRevision: HEAD
-        path: k8s-manifests  # Change if needed
+        path: "."  # Change if needed
       destination:
         server: '{{url}}'
         namespace: myapp

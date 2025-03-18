@@ -2,21 +2,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: myapp
-  namespace: production-myapp
-  #line 5 is added later
+  namespace: production-myapp  # Line 5 is added later
 spec:
   selector:
     matchLabels:
       app: myapp
-  replicas: 4
+  replicas: 3
   template:
     metadata:
       labels:
         app: myapp
     spec:
       containers:
-      - name: myapp
-        image: nanajanashia/argocd-app:1.2
-        ports:
-        - containerPort: 8080
-
+        - name: myapp
+          image: nanajanashia/argocd-app:1.2
+          ports:
+            - containerPort: 8080
+          securityContext:
+            allowPrivilegeEscalation: false
+            runAsUser: 0
